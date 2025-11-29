@@ -63,7 +63,7 @@ export default function AdminView({ appId, showToast }) {
        <div className="space-y-3">
          {movies.map(m => (
            <div key={m.id} className="flex items-center justify-between bg-neutral-900 border border-neutral-800 p-4 rounded-xl hover:border-neutral-600 transition-colors">
-              <div className="flex items-center gap-4 overflow-hidden"><img src={m.posterUrl} className="w-12 h-16 object-cover rounded-md bg-neutral-800 shadow-sm" alt="t" onError={(e)=>e.target.style.display='none'}/><div><p className="font-bold truncate text-lg">{m.title}</p><p className="text-xs text-neutral-400">{m.genre} • IDR {m.price}k • Rating: {m.rating || 0}</p></div></div>
+              <div className="flex items-center gap-4 overflow-hidden"><img src={m.posterUrl} className="w-12 h-16 object-cover rounded-md bg-neutral-800 shadow-sm" alt="t" onError={(e)=>e.target.style.display='none'}/><div><p className="font-bold truncate text-lg">{m.title}</p><p className="text-xs text-neutral-400">{m.genre} • IDR {m.price} • Rating: {m.rating || 0}</p></div></div>
               <div className="flex gap-2"><button onClick={() => handleEdit(m)} className="p-2 bg-blue-900/20 text-blue-500 rounded-lg hover:bg-blue-900/40 transition-colors"><Menu size={18}/></button><button onClick={() => handleDelete(m.id)} className="p-2 bg-red-900/20 text-red-500 rounded-lg hover:bg-red-900/40 transition-colors"><Trash2 size={18}/></button></div>
            </div>
          ))}

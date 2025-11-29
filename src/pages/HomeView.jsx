@@ -90,7 +90,7 @@ export default function HomeView({ onMovieClick, appId }) {
                       <h3 className="font-bold text-white truncate">{movie.title}</h3>
                       <div className="flex justify-between items-center mt-2">
                         <span className="text-[10px] text-neutral-400 bg-neutral-800 px-2 py-1 rounded uppercase tracking-wider">{movie.genre?.split(',')[0]}</span>
-                        <span className="text-sm font-bold text-red-500">Rp {movie.price}k</span>
+                        <span className="text-sm font-bold text-red-500">Rp {movie.price}</span>
                       </div>
                     </div>
                   </div>
